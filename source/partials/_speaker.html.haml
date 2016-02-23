@@ -1,0 +1,19 @@
+%article.mod-speaker
+
+  -# Photo + Meta Info
+  .mod-speaker-meta
+    - if speaker.image_filename
+      .mod-frame.photo= image_tag "speakers/#{speaker.image_filename}"
+    .info
+      %h3.name= speaker.name
+      - if speaker.organization
+        %h5.organization= speaker.organization
+      - if speaker.twitter
+        %h5.twitter= link_to "@#{speaker.twitter}", "https://twitter.com/#{speaker.twitter}", target: "_blank"
+      - if speaker.websites
+        - speaker.websites.each do |site|
+          %h6= link_to site, add_url_scheme(site), target: "_blank"
+
+  -# Bio
+  .mod-speaker-bio
+    = speaker.bio

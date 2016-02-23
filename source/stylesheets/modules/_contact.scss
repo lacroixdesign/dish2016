@@ -1,0 +1,11 @@
+.mod-contact {
+  margin: .75em 0 0;
+  color: lighten($blue, 25);
+  font-size: 1.5em;
+  text-align: center;
+  text-shadow: 0 1px 1px white;
+
+  a:hover {
+    color: $blue;
+  }
+}

@@ -1,0 +1,37 @@
+// Basic Elements
+body {
+  background: $off-white;
+  font-family: $typeface-sans;
+  text-shadow: 1px 1px 1px transparent;
+}
+
+a {
+  @include transition (all 0.2s ease-in-out);
+}
+
+p {
+  a,
+  a:visited,
+  a:focus {
+    color: white;
+    font-style: italic;
+  }
+
+  a:hover {
+    color: darken(white, 10%);
+    border-bottom: 1px solid darken(white, 10%);
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: .75em;
+}
+
+li {
+  margin: 0;
+}

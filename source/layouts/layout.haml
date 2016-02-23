@@ -1,0 +1,134 @@
+!!! 5
+/[if lt IE 9] <html class="ie8" lang="en">
+<!--[if gte IE 9]><!-->
+%html{ lang: "en" }
+  <!--<![endif]-->
+
+  /
+    _
+    _
+    _          ///   ///    ..oOOOo..
+    _         ///   ///  .:OOOOOOOOOOO:.
+    _        ///   ///  .OOOOOOOOOOOOOOO.
+    _       ///   ///   OOOOOOOOOOOOOOOOO
+    _      ///   ///    OOOOOOOOOOOOOOOOO
+    _     ///   ///     OOOOOOOOOOOOOOOOO
+    _    ///   ///      `OOOOOOOOOOOOOOO'
+    _   ///   ///        `:OOOOOOOOOOO:'
+    _  ///   ///            ''*OOO*''
+    _
+    _  Designed & Developed by LaCroix Design Co.
+    _    http://lacroixdesign.net
+    _
+    _
+    _
+
+  %head
+    %meta(charset="utf-8")
+    %title= [yield_content(:title), "DISH Student Design Conference 2015 - Nashville, TN"].reject(&:blank?).join(' | ')
+
+    -# general meta
+    %meta{name: "description", content: "Presented by AIGA Nashville, the DISH Student Design Conference takes place on March 27 & 28, 2015."}
+    %meta{name: "author", content: "Michael LaCroix, James LaCroix"}
+    %meta{name: "application-name", content: "DISH Conference"}
+    %meta{:'http-equiv' => "X-UA-Compatible", content: "chrome=1"}
+
+    -# fav and touch icons (reside in the /public folder), plus iOS meta
+    %link{:href => "/apple-touch-icon-57x57.png", :rel => "apple-touch-icon", :sizes => "57x57"}/
+    %link{:href => "/apple-touch-icon-60x60.png", :rel => "apple-touch-icon", :sizes => "60x60"}/
+    %link{:href => "/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}/
+    %link{:href => "/apple-touch-icon-76x76.png", :rel => "apple-touch-icon", :sizes => "76x76"}/
+    %link{:href => "/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}/
+    %link{:href => "/apple-touch-icon-120x120.png", :rel => "apple-touch-icon", :sizes => "120x120"}/
+    %link{:href => "/apple-touch-icon-144x144.png", :rel => "apple-touch-icon", :sizes => "144x144"}/
+    %link{:href => "/apple-touch-icon-152x152.png", :rel => "apple-touch-icon", :sizes => "152x152"}/
+    %link{:href => "/apple-touch-icon-180x180.png", :rel => "apple-touch-icon", :sizes => "180x180"}/
+    %link{:href => "/favicon-32x32.png", :rel => "icon", :sizes => "32x32", :type => "image/png"}/
+    %link{:href => "/favicon-194x194.png", :rel => "icon", :sizes => "194x194", :type => "image/png"}/
+    %link{:href => "/favicon-96x96.png", :rel => "icon", :sizes => "96x96", :type => "image/png"}/
+    %link{:href => "/android-chrome-192x192.png", :rel => "icon", :sizes => "192x192", :type => "image/png"}/
+    %link{:href => "/favicon-16x16.png", :rel => "icon", :sizes => "16x16", :type => "image/png"}/
+    %link{:href => "/manifest.json", :rel => "manifest"}/
+    %link{:color => "#2e54a5", :href => "/safari-pinned-tab.svg", :rel => "mask-icon"}/
+    %meta{:content => "#2e54a5", :name => "msapplication-TileColor"}/
+    %meta{:content => "/mstile-144x144.png", :name => "msapplication-TileImage"}/
+    %meta{:content => "#2e54a5", :name => "theme-color"}/
+
+
+    -# HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "html5"
+
+    = stylesheet_link_tag "application", media: "all"
+
+    -# CSS3 polyfill, IE6-8 support of CSS3 pseudo-classes with Selectivizr
+    /[if lt IE 9]
+      = javascript_include_tag "polyfills"
+
+    = javascript_include_tag "responsive"
+
+    -# Typekit
+    %script{ type: "text/javascript", src: "//use.typekit.net/oox6lnk.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    -# Google Maps
+    %script{ type: "text/javascript", src: "http://maps.googleapis.com/maps/api/js?sensor=true&keykey=AIzaSyA67Zko6Iz75NXQZK0aHfyjU0ncjd913Zk" }
+
+
+
+
+  %body
+    /[if lt IE 9]
+      .wrap.outdated-browser
+        %div
+          %p
+            %a.close{ href: "#" } x
+            You are using an <strong>outdated</strong> browser. Please
+            %a{ href: "http://browsehappy.com/", target: '_blank' } upgrade your browser or
+            %a{ href: "http://www.google.com/chromeframe/?redirect=true", target: '_blank' } activate Google Chrome Frame
+            to improve your experience.
+
+    = yield
+
+
+
+
+    -# javascript
+    = javascript_include_tag "application"
+
+    - unless development?
+      -# Google Analytics
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11518275-4']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      -# Gauges Tracking
+      :javascript
+        var _gauges = _gauges || [];
+        (function() {
+          var t   = document.createElement('script');
+          t.type  = 'text/javascript';
+          t.async = true;
+          t.id    = 'gauges-tracker';
+          t.setAttribute('data-site-id', '510c17eaf5a1f50c3900000c');
+          t.src = '//secure.gaug.es/track.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(t, s);
+        })();
+
+
+
+
+    -# Width Plugin
+    - if development?
+      #lacroix-browserwidth{style: "position:fixed; bottom:0; left:0; background:#555; color:#CCC; font-size:0.75em; padding:0.25em; text-shadow: 0 -1px 1px rgba(0,0,0,0.9); font-weight:normal;"}
+      :javascript
+        function showWidth(){var w = $(window).width();$('#lacroix-browserwidth').text(w);}showWidth();$(window).resize(function(){showWidth();});

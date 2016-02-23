@@ -1,0 +1,18 @@
+.layout-intro {
+  padding: 3em 0 6em;
+  background: url('/images/bg.jpg');
+  background-size: cover;
+
+  @include media(480px) {
+    padding: 4.75em 0 0;
+  }
+
+  @include media($breakpoint-ipad) {
+    padding-bottom: 9em;
+  }
+}
+
+.layout-dates {
+  margin: .5em 0 1em;
+  text-align: center;
+}

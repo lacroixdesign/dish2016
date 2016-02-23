@@ -1,0 +1,9 @@
+.btn-primary {
+  @include button-flat($orange, $off-white, $radius: 4px);
+  @include transition(all 0 ease-in-out);
+
+  &.large {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}

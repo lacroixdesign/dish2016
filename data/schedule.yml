@@ -1,0 +1,31 @@
+---
+- title: Friday, March 27
+  events:
+    - label: Location TBA
+
+    - time: "7:00 p.m."
+      title: BINGO Night! <small><br>Free for Members <br>$10 for Non-Members</small>
+
+
+- title: Saturday, March 28
+  events:
+    - label: Emma Bistro
+
+    - time: "9:00 a.m."
+      title: "1st Portfolio Review"
+    - time: "10:00 a.m."
+      title: "2nd Portfolio Review"
+    - time: "9:00 a.m."
+      title: "Breakfast Available Until 10:30"
+    - time: "11:00 a.m."
+      title: "Speaker 1"
+    - time: "12:00 p.m."
+      title: "Lunch"
+    - time: "1:00 p.m."
+      title: "Speaker 2"
+    - time: "2:00 p.m."
+      title: "Speaker 3"
+    - time: "3:00 p.m."
+      title: Break
+    - time: "3:15 p.m."
+      title: Q&A Panel

@@ -1,0 +1,67 @@
+// Speaker Container
+.mod-speaker {
+  @include outer-container;
+  margin-top: 2em;
+  margin-bottom: 2em;
+
+  @include media($breakpoint-ipad) {
+    .mod-speaker-meta {
+      @include span-columns(4);
+    }
+
+    .mod-speaker-bio {
+      @include span-columns(8);
+    }
+  }
+}
+
+// Speaker Meta Info
+.mod-speaker-meta {
+  @include outer-container;
+  text-align: center;
+
+  .photo,
+  .info {
+    margin-bottom: 1em;
+  }
+
+  .twitter {
+    font-weight: normal;
+    font-style: italic;
+    color: lighten($blue, 25);
+  }
+
+  .organization {
+    font-weight: normal;
+  }
+
+  @include media(480px) {
+    text-align: left;
+
+    .photo {
+      @include span-columns(2 of 8);
+    }
+    .info {
+      @include span-columns(6 of 8);
+    }
+  }
+
+  @include media($breakpoint-ipad) {
+    text-align: center;
+
+    .photo,
+    .info {
+      @include span-columns(12 of 12);
+    }
+
+    .info {
+      font-size: 100%;
+    }
+  }
+
+  @include media($breakpoint-desktop) {
+    .info {
+      font-size: 125%;
+    }
+  }
+}

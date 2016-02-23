@@ -1,0 +1,16 @@
+.mod-sponsors {
+  margin: .5em 0;
+  color: #bfbfbf;
+  font-family: $typeface-script;
+  font-weight: 400;
+  font-size: 1.25em;
+  text-shadow: 0 1px 1px white;
+
+  @include media(480px) {
+    font-size: 1.5em;
+  }
+
+  @include media($breakpoint-ipad) {
+    font-size: 2em;
+  }
+}

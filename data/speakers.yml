@@ -1,0 +1,18 @@
+---
+- name: Joseph Veazey
+  organization:
+  twitter: veazeyjoseph
+  image_filename: joseph.jpg
+  websites:
+    - "JosephVeazey.com"
+  bio: |
+       <p>After growing up in Lilburn, Georgia, Joseph Veazey studied Graphic Design at the Savannah College of Art and Design. After school he spent two years at Adult Swim on an incredible team designing DVDs, billboards, posters, and a giant inflatable bathing cat. He then relocated to NYC where he served as Art Director for fashion designer Azede Jean-Pierre, and began pursuing freelance work in the city. In 2015 he officially went on his own and currently stays busy doing graphic design and illustration from his Brooklyn studio, for clients such as Vice, Adult Swim, Cartoon Network, Tribeca Film Festival, Fools Gold Records, Ogilvy, Nickelodeon, Vinyl Moon, and Vevo. His work has been awarded a Gold Medal by Society of Illustrators as well as being selected for the Print Magazine Regional Design Annual, American Illustration, Creative Quarterly, and CMYK Magazine, among others.</p>
+
+- name: Jessica Svendsen
+  organization:
+  twitter: jessicasvendsen
+  image_filename: jessica.jpg
+  websites:
+    - "JessicaSvendsen.com"
+  bio: |
+       <p>Jessica Svendsen is a designer based in San Francisco, working in identity, book and exhibition design, and illustration. Currently, Jessica is a designer at Apple, working on the global communications team. Previously, she was a designer at Pentagram in New York, for partner Michael Bierut. She has taught typography as adjunct faculty at Parsons The New School and the Pratt Institute. She received a MFA in Graphic Design from the Yale School of Art in 2013 and a BA in English Literature from Yale University in 2009.</p>

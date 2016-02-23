@@ -1,0 +1,208 @@
+-# Nav
+%nav#nav.mod-menu
+  %ul
+    %li
+      = link_to "#intro" do
+        = icon "e006"
+    %li
+      = link_to "#speakers" do
+        %span.icon= icon "e000"
+        %span.text Speakers
+    %li
+      = link_to "#location" do
+        %span.icon= icon "e002"
+        %span.text Location
+    %li
+      = link_to "#schedule" do
+        %span.icon= icon "e001"
+        %span.text Schedule
+    %li
+      = link_to "#portfolio-reviews" do
+        %span.icon= icon "e004"
+        %span.text Portfolio Reviews
+    %li
+      = link_to "#join-aiga" do
+        %span.icon= icon "e003"
+        %span.text Join AIGA
+
+
+-# Intro
+%section#intro.layout-intro
+  .layout-constrained
+    .mod-logo= image_tag "logo.png"
+    .layout-dates
+      %h2.mod-date April 1 &amp; 2, 2016
+      %a.btn-primary.large{ href: "http://nashville.aiga.org/upcoming-events/", target: "_blank" } Register Now
+      %h6.mod-price
+        Event Rate: $25 Members, $45 Non-Members
+        %br
+        %br
+        Porfolio Reviews: Free for Members, $15 for Non-Members
+        %br
+        %a{ href: "http://nashville.aiga.org/upcoming-events/", target:"_blank" } 9:00-10:00am
+        &amp;
+        %a{ href: "http://nashville.aiga.org/upcoming-events/", target:"_blank" } 10:00-11:00am
+        available
+    .mod-contact
+      %a{ href: "https://twitter.com/aiganashville", target: "_blank" }= icon "e005"
+      = mail_to "president@nashville.aiga.org", icon("e007")
+
+
+-# Speakers
+%section#speakers.mod-section.mod-speakers
+  .layout-constrained
+    %h1 Speakers
+    %hr
+
+    - data.speakers.each_with_index do |speaker, index|
+      - unless index == 0
+        %hr
+      = partial "partials/speaker", locals: { speaker: speaker }
+
+-# Location
+%section#location.mod-section.mod-location
+  .layout-constrained
+    %h1 Location
+    %hr
+
+    .mod-frame
+      .mod-map#map-canvas
+
+    .layout-location-meta
+      .venue
+        %h2 O'More College of Design
+        %p
+          423 S Margin St
+          %br
+          Franklin, TN 37064
+        %p= link_to "Get Directions", "https://www.google.com/maps/dir/''/o'more+college+of+design+franklin/data=!4m5!4m4!1m0!1m2!1m1!1s0x88647e53729d63a7:0xe44c7df681e4860e?sa=X&ved=0ahUKEwjOy6G-54zLAhWGs4MKHcRZAzEQ9RcIdjAP", target: "_blank"
+      .travel
+        %h4 Visiting Nashville
+        %p There’s more to Nashville than country music and southern cuisine, so check out this #{link_to "nifty city guide", "http://www.designsponge.com/2013/08/nashville-guide-update.html", target: "_blank"} created by Design Sponge to plan your free time during the conference!
+
+    %hr
+
+    .layout-accommodations
+      %h3 Where to Stay:
+      %ul.mod-accommodations
+        - data.accommodations.each do |acc|
+          %li
+            %h5= acc.name
+            %p
+              - if acc.area
+                = acc.area
+                %br
+              - if acc.address1
+                = acc.address1
+                %br
+              - if acc.address2
+                = acc.address2
+                %br
+              - if acc.url
+                %a{ href: acc.url, target: "_blank" } Reserve now &rarr;
+
+
+-# Schedule
+%section#schedule.mod-section.mod-schedule
+  .layout-constrained
+    %h1 Schedule
+    %h3 Coming Soon
+    -# %hr
+    -#
+    -# - if data.schedule
+    -#   - data.schedule.each do |day|
+    -#     .layout-half-768
+    -#       %h2= day.title
+    -#       %table.mod-events
+    -#         %tbody
+    -#           - day.events.each do |e|
+    -#             - if e.label
+    -#               %tr
+    -#                 %td.label{ colspan: "2" }= e.label
+    -#             - else
+    -#               %tr
+    -#                 %td.time= e.time
+    -#                 %td.title= e.title
+
+
+-# Portfolio Reviews
+%section#portfolio-reviews.mod-section.mod-portfolio-reviews
+  .layout-constrained
+    %h1 Portfolio Reviews
+    %hr
+    .layout-half-768
+      %h3 The Review
+      %p
+        The DISH portfolio review is designed to give you – a student about to embark on a career in the design industry — advice, insight, and useful information about how to present yourself and your work. Here is your chance to have a professional look at your portfolio in a no-risk, non-competitive environment. You can practice your interviewing skills and get honest feedback about your portfolio and resume.
+      %h3 Why you should attend?
+      %p
+        You will receive thoughtful, constructive, one-on-one evaluations of your work by an array of design professionals — art directors, media producers, educators, and hiring managers – from the Nashville area. Their goal is to help answer your questions and offer completely honest advice about your portfolio based on their creative perspective and experience. While this event is not a job fair, some reviewers may be looking for potential employees or interns. It is a great way to network and become aware of who’s who in the Nashville design community.
+      %h3 Who should attend?
+      %p
+        The DISH portfolio review is open to design students at the junior and senior undergraduate level.
+
+    .layout-half-768
+      %h3 What you should expect?
+      %p
+        You will have table space to set up your work. Reviewers will rotate around the room, and every effort will be made to maximize the number of reviewers who will sit with you and discuss your work. Keep in mind that reviewers will be asked to limit their critique time to 10 minutes, so be prepared to present your portfolio and get feedback within this time constraint. Dress appropriately—it is a creative field but make sure that you look professional. Although this is a non-competitive event, this Portfolio Review is designed to prepare you for the actual interview process. Be mindful of how you present yourself and your work.
+      %h3 What you should bring?
+      %p
+        Come with 8 to 12 of your best portfolio pieces. These can be in a book, binder, individual sheets, on a laptop or pretty much anyway you think will best display your work. It’s not a fashion show, so there aren’t any awards for the fanciest case or computer, the focus is on your work. However, we encourage students to use their display space to express their full design personality, so don’t feel limited. If you have three dimensional pieces, promos, or creative “flair” (37 pieces, to be exact) to add to your space to reflect who you are as a designer (without impeding on your neighbor’s space), go for it.
+
+
+-# Join AIGA
+%section#join-aiga.mod-section.mod-join-aiga
+  .layout-join-aiga
+    %h1 Join AIGA
+    %hr
+    .mod-join-aiga-overview
+      %p
+        When you are a member of AIGA, you are part of a growing network of designers that work together to increase design’s influence and to expand opportunities for designers worldwide. Your AIGA membership is critical to ensuring that your profession is strong, relevant and influential.
+      %p
+        AIGA’s 20,000+ members share and promote a professional ethos. Opportunities for networking are plentiful through your #{link_to "local chapter", "http://www.aiga.org/chapters/", target: "_blank" }, which offers a wide variety of #{link_to "programs and events", "http://www.aiga.org/events", target: "_blank" } locally and nationally. Your membership makes possible the #{link_to "activities of a national organization", "http://www.aiga.org/national-programs/", target: "_blank" } promoting design’s value on your behalf, and gives you access to #{link_to "professional development", "http://www.aiga.org/professional-development/", target: "_blank" } and #{link_to "exclusive benefits", "http://www.aiga.org/benefits/", target: "_blank" } that can only be provided by an organization with the scale and reach of AIGA.
+      %p
+        AIGA’s membership structure is flexible: Whether you’re an established designer wanting to give back to the profession or a design student just beginning your professional journey, you can choose the membership level that fits you best. #{link_to "Belong to AIGA", "http://my.aiga.org/vango/core/login.aspx", title: "Join", target: "_blank" } at a level as high as your aspirations!
+
+    .mod-join-aiga-list
+      %h5 Annual Membership Levels:
+      %ul
+        %li
+          Contributor -
+          %small $50/yr
+        %li
+          Supporter -
+          %small $150/yr, 13/mo
+        %li
+          Sustaining Member -
+          %small $250/yr, 21/mo
+        %li
+          Design Leader -
+          %small $500/yr, 42/mo
+        %li
+          Trustee -
+          %small $2500/yr, 209/mo
+
+    .mod-join-aiga-list
+      %h5 Belong to AIGA!
+      %ul
+        %li
+          %a{ href: "http://www.aiga.org/chapters", target: "_blank" } Find a chapter near you
+        %li
+          %a{ href: "http://www.aiga.org/student-groups/", target: "_blank" } Find a student group
+        %li
+          %a{ href: "http://www.aiga.org/Events/", target: "_blank" } Attend an upcoming event
+        %li
+          %a{ href: "http://www.aiga.org/benefits/", target: "_blank" } Learn more about benefits
+
+
+-# Footer
+%section#footer
+  .layout-constrained
+    %a.btn-primary.large{ href: "http://nashville.aiga.org/upcoming-events/", target: "_blank" } Register Now
+    /%h2.mod-sponsors Many Thanks To Our Sponsors
+
+
+-# Brand
+.mod-brand
+  .layout-constrained
+    Site Designed &amp; Developed by #{link_to "LaCroix Design Co.", "http://www.lacroixdesign.net", target: "_blank"}

@@ -1,0 +1,21 @@
+.layout-join-aiga {
+  @include outer-container;
+  padding: 0 $page-gutter;
+
+  @include media($breakpoint-ipad) {
+    .mod-join-aiga-list {
+      @include span-columns(6);
+    }
+  }
+
+  @include media($breakpoint-desktop) {
+    .mod-join-aiga-overview {
+      @include span-columns(6);
+    }
+
+    .mod-join-aiga-list {
+      @include span-columns(6);
+      @include omega();
+    }
+  }
+}

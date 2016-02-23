@@ -1,0 +1,127 @@
+!!! 5
+/[if lt IE 9] <html class="ie8" lang="en">
+<!--[if gte IE 9]><!-->
+%html{ lang: "en" }
+  <!--<![endif]-->
+
+  / 
+    _
+    _
+    _          ///   ///    ..oOOOo..
+    _         ///   ///  .:OOOOOOOOOOO:.
+    _        ///   ///  .OOOOOOOOOOOOOOO.
+    _       ///   ///   OOOOOOOOOOOOOOOOO 
+    _      ///   ///    OOOOOOOOOOOOOOOOO
+    _     ///   ///     OOOOOOOOOOOOOOOOO 
+    _    ///   ///      `OOOOOOOOOOOOOOO'
+    _   ///   ///        `:OOOOOOOOOOO:'
+    _  ///   ///            ''*OOO*''
+    _  
+    _  Designed & Developed by LaCroix Design Co.
+    _    http://lacroixdesign.net
+    _  
+    _  
+    _
+  
+  %head
+    %meta(charset="utf-8")
+    %title= [yield_content(:title), "DISH Student Design Conference 2013 - Nashville, TN"].reject(&:blank?).join(' | ')
+    
+    -# koko wa general meta
+    %meta{name: "description", content: "DISH Student Design Conference 2013 - Nashville, TN"}
+    %meta{name: "author", content: "Michael LaCroix, James LaCroix"}
+    %meta{name: "application-name", content: "DISH Conference"}
+    %meta{:'http-equiv' => "X-UA-Compatible", content: "chrome=1"}
+    
+    -# koko wa fav and touch icons (reside in the /public folder), plus iOS meta
+    %link{rel: "shortcut icon", href: "/favicon.ico"}
+    %link{rel: "apple-touch-icon", href: "/apple-touch-icon-57x57-precomposed.png"}
+    %link{rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "/apple-touch-icon-72x72-precomposed.png"}
+    %link{rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "/apple-touch-icon-114x114-precomposed.png"}
+    %link{rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "/apple-touch-icon-144x144-precomposed.png"}
+    %meta{name: "msapplication-TileColor", content: "#f2f2f2"}
+    %meta{name: "msapplication-TileImage", content: "/windows-icon.png"}
+    %meta{name: "viewport", content: "initial-scale=1.0, width=device-width, user-scalable=no, maximum-scale=1.0"}
+    %meta{name: "apple-mobile-web-app-capable", content: "yes"}
+    %meta{name: "apple-mobile-web-app-status-bar-style", content:"black"}
+    
+    -# koko wa Typekit
+    %script{ type: "text/javascript", src: "//use.typekit.net/oox6lnk.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+    
+    :css
+      * {
+        -webkit-font-smoothing: antialiased !important;
+        border: none;
+      }
+
+      body {
+        padding: 1em 0 0 !important;
+        background: #f2f2f2;
+        color: #666666;
+        font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 100%;
+        text-shadow: 0 1px 1px white;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        color: #bfbfbf;
+        font-family: "corner-store", Georgia, Cambria, "Times New Roman", Times, serif;
+        font-size: 2em;
+        font-weight: 400;
+      }
+
+      p {
+        margin: 0 0 1em;
+        font-size: 1em;
+      }
+
+      a {
+        color: #666666;
+      }
+
+      .mod-logo {
+        width: 100%;
+        max-width: 12.5em;
+        margin: 0 auto 1em;
+      }
+
+      .mod-logo img {
+        display: block;
+        width: 100%;
+      }
+
+
+
+  %body
+    = yield
+    
+    - unless development?
+      -# koko wa Google Analytics
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-11518275-4']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+      -# koko wa Gauges Tracking
+      :javascript
+        var _gauges = _gauges || [];
+        (function() {
+          var t   = document.createElement('script');
+          t.type  = 'text/javascript';
+          t.async = true;
+          t.id    = 'gauges-tracker';
+          t.setAttribute('data-site-id', '510c17eaf5a1f50c3900000c');
+          t.src = '//secure.gaug.es/track.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(t, s);
+        })();

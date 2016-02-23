@@ -1,0 +1,35 @@
+// General Section
+.mod-section {
+  padding: 2em 0;
+  color: $off-white;
+  font-family: $typeface-serif;
+
+  h1 {
+    font-size: 3em;
+  }
+}
+
+// Speakers
+.mod-speakers {
+  @include section-color($blue);
+}
+
+// Location
+.mod-location {
+  @include section-color($orange);
+}
+
+// Schedule
+.mod-schedule {
+  @include section-color($blue);
+}
+
+// Portfolio Reviews
+.mod-portfolio-reviews {
+  @include section-color($orange);
+}
+
+// Join AIGA
+.mod-join-aiga {
+  @include section-color($blue);
+}

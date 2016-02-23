@@ -1,0 +1,24 @@
+---
+- name: Hampton Inn & Suites
+  area: Nashville-Green Hills
+  address1: 2324 Crestmoor Road
+  address2: Nashville, TN 37215
+  url: "http://hamptoninn3.hilton.com/en/hotels/tennessee/hampton-inn-and-suites-nashville-green-hills-BNAGHHX/index.html"
+
+- name: Holiday Inn Hotel
+  area: Nashville-Vanderbilt (Downtown)
+  address1: 2613 West End Ave
+  address2: Nashville, TN 37203
+  url: "http://www.holidayinn.com/hotels/us/en/nashville/bnavb/hoteldetail?&cm_mmc=mdpr-_-googlemaps-_-sl-_-bnavb&dp=true"
+
+- name: La Quinta Inn
+  area:
+  address1: 4311 Sidco Drive
+  address2: Nashville, TN 37204
+  url: "http://www.lq.com/lq/properties/propertyProfile.do?ident=LQ559&propId=559http://www.lq.com/lq/properties/propertyProfile.do?ident=LQ559&propId=559"
+
+- name: Red Roof Inn South
+  area:
+  address1: 4271 Sidco Drive
+  address2: Nashville, TN 37204
+  url: "https://www.redroof.com"

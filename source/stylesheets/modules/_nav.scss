@@ -1,0 +1,52 @@
+.mod-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  border-bottom: 1px solid $darker-white;
+  background: $white;
+  background: rgba(255,255,255,0.9);
+  color: $grey;
+  font-weight: bold;
+  text-shadow: 0 1px 1px $white;
+  text-transform: uppercase;
+
+  ul {
+    @include unstyled-list;
+    @include outer-container;
+    text-align: center;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5em 1em;
+
+    &:hover {
+      background: darken($white, 5%);
+    }
+  }
+
+  .text {
+    display: none;
+  }
+
+  @include media($breakpoint-ipad) {
+    .icon {
+      display: none;
+    }
+
+    .text {
+      display: inline-block;
+    }
+  }
+
+  @include media($breakpoint-desktop) {
+    font-size: 80%;
+  }
+}
